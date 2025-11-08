@@ -1,5 +1,6 @@
 const Crash = require('../models/dataModel');
 
+// Question 1
 exports.q1 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.REPORTDATE');
@@ -28,6 +29,7 @@ exports.q1 = async (req, res) => {
   }
 };
 
+// Question 2
 exports.q2 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.TOTAL_VEHICLES');
@@ -39,6 +41,7 @@ exports.q2 = async (req, res) => {
   }
 };
 
+// Question 3
 exports.q3 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.TOTAL_PEDESTRIANS');
@@ -51,6 +54,7 @@ exports.q3 = async (req, res) => {
   }
 };
 
+// Question 4
 exports.q4 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.WARD');
@@ -68,6 +72,7 @@ exports.q4 = async (req, res) => {
   }
 };
 
+// Question 5
 exports.q5 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.WARD');
@@ -80,6 +85,7 @@ exports.q5 = async (req, res) => {
   }
 };
 
+// Question 6
 exports.q6 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties');
@@ -113,6 +119,7 @@ exports.q6 = async (req, res) => {
   }
 };
 
+// Question 7
 exports.q7 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties.ADDRESS');
@@ -130,6 +137,7 @@ exports.q7 = async (req, res) => {
   }
 };
 
+// Question 8
 exports.q8 = async (req, res) => {
   try {
     const crashes = await Crash.find({}, 'properties');
