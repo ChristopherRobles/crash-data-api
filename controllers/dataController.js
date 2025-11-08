@@ -1,5 +1,6 @@
 const Crash = require('../models/dataModel');
 
+// Creat a new crash record
 exports.createCrash = async (req, res) => {
   try {
     const crash = new Crash(req.body);
@@ -10,6 +11,7 @@ exports.createCrash = async (req, res) => {
   }
 };
 
+// Retrieve all crash records
 exports.getCrashes = async (req, res) => {
   try {
     const crashes = await Crash.find();
@@ -19,6 +21,7 @@ exports.getCrashes = async (req, res) => {
   }
 };
 
+// Bulk insert crash records
 exports.bulkInsertCrashes = async (req, res) => {
   try {
     const result = await Crash.insertMany(req.body);
